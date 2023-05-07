@@ -33,13 +33,13 @@ console.log(galleryList);
 
 galleryList.addEventListener('click', onImageClick);
 
+const instance = new simpleLightbox('.gallery a');
+
 function onImageClick(event) {
   event.preventDefault();
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-
-  const instance = new simpleLightbox('.gallery a');
 
   instance.on('show.simplelightbox');
 
